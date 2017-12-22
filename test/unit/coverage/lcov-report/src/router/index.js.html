@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\router\index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/router/</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.22% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">22.22% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/27</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Vue from 'vue'
+import Router from 'vue-router'
+import {routerMode} from '../config/env'
+import store from '@/store'
+&nbsp;
+const login = r =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require.ensure([], () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >r(require('../views/login/login')),</span></span> 'login')</span></span>
+const oces = r =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require.ensure([], () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >r(require('../views/oces/Oces')),</span></span> 'oces')</span></span>
+const home = r =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >require.ensure([], () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >r(require('../views/oces/home/home')),</span></span> 'home')</span></span>
+Vue.use(Router)
+&nbsp;
+const router = new Router({
+  routes: [
+    {
+      path: '/',
+      redirect: '/oces/'
+    },
+    {
+      path: '/index.html',
+      redirect: '/oces/'
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: login
+    },
+    {
+      path: '/oces/',
+      component: oces,
+      children: [
+        {
+          path: '',
+          redirect: 'home'
+        },
+        {
+          path: 'home/',
+          name: 'home',
+          component: home,
+          meta: {
+            requireAuth: true  // 添加该字段，表示进入这个路由是需要登录的
+          },
+          children: [
+          ]
+        }
+      ]
+    }
+  ],
+  mode: routerMode
+})
+&nbsp;
+//  判断是否需要登录权限 以及是否登录
+router.beforeEach((to, from, next) =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >  if (window.mtj) {</span>
+<span class="cstat-no" title="statement not covered" >    if (from.name) {</span>
+<span class="cstat-no" title="statement not covered" >      window.mtj.pageviewEndWithName(from.name, () =&gt; <span class="fstat-no" title="function not covered" >{ <span class="cstat-no" title="statement not covered" >console.log('Success mtj.pageviewEndWithName') </span>},</span> () =&gt; <span class="fstat-no" title="function not covered" >{ <span class="cstat-no" title="statement not covered" >console.log('Error mtj.pageviewEndWithName') </span>})</span></span>
+    }
+<span class="cstat-no" title="statement not covered" >    window.mtj.pageviewStartWithName(to.name, () =&gt; <span class="fstat-no" title="function not covered" >{ <span class="cstat-no" title="statement not covered" >console.log('Success mtj.pageviewStartWithName') </span>},</span> () =&gt; <span class="fstat-no" title="function not covered" >{ <span class="cstat-no" title="statement not covered" >console.log('Error mtj.pageviewStartWithName') </span>})</span></span>
+  }
+  //  判断是否需要加头部状态栏浮层
+  // if (to.name === 'home' || to.name === 'my' || to.name === 'login') {
+  //   if (window.StatusBar) {
+  //     window.StatusBar.overlaysWebView(true)
+  //     window.StatusBar.styleLightContent(true)
+  //   }
+  // } else {
+<span class="cstat-no" title="statement not covered" >  if (window.StatusBar) {</span>
+<span class="cstat-no" title="statement not covered" >    window.StatusBar.overlaysWebView(false)</span>
+<span class="cstat-no" title="statement not covered" >    window.StatusBar.styleDefault(true)</span>
+  }
+<span class="cstat-no" title="statement not covered" >  if (to.meta &amp;&amp; !to.meta.loginedSign &amp;&amp; store.state.isLogin) {</span>
+<span class="cstat-no" title="statement not covered" >    if (to.name === 'login') {</span>
+<span class="cstat-no" title="statement not covered" >      next({</span>
+        path: from.path,
+        query: {redirect: from.fullPath}  // 将跳转的路由path作为参数，登录成功后跳转到该路由
+      })
+    } else {
+<span class="cstat-no" title="statement not covered" >      next()</span>
+    }
+  }
+  // }
+  // store.dispatch('showLoading', false) // 隐藏加载中动画
+<span class="cstat-no" title="statement not covered" >  if (to.meta &amp;&amp; to.meta.requireAuth) {  // 判断该路由是否需要登录权限</span>
+    // store.state.isLogin = true
+<span class="cstat-no" title="statement not covered" >    if (store.state.isLogin) {  // 通过vuex state获取当前的用户是否登录</span>
+<span class="cstat-no" title="statement not covered" >      next()</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      store.dispatch('initUserInfo').then(() =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        if (store.state.isLogin) {  // 通过vuex state获取当前的用户是否登录</span>
+<span class="cstat-no" title="statement not covered" >          next()</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          next({</span>
+            path: '/login',
+            query: {redirect: to.fullPath}  // 将跳转的路由path作为参数，登录成功后跳转到该路由
+          })
+        }
+      }).catch(() =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        console.log('catch')</span>
+<span class="cstat-no" title="statement not covered" >        next({</span>
+          path: '/login',
+          query: {redirect: to.fullPath}  // 将跳转的路由path作为参数，登录成功后跳转到该路由
+        })
+      })
+      // next({
+      //   path: '/login',
+      //   query: {redirect: to.fullPath}  // 将跳转的路由path作为参数，登录成功后跳转到该路由
+      // })
+    }
+  } else {
+<span class="cstat-no" title="statement not covered" >    next()</span>
+  }
+})
+&nbsp;
+export default router
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Dec 18 2017 14:10:22 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

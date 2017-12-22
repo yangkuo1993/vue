@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="test"
+    errors="0" failures="1" hostname="" id="" package="test" skipped="0"
+    tests="1" time="4.782" timestamp="Mon, 18 Dec 2017 06:01:29 GMT">
+  
+    <testcase name="default e2e tests" classname="test" time="4.782" assertions="2">
+
+      <failure message="Testing if element &lt;.loginContainer&gt; is present.">    at Object.defaultE2eTests [as default e2e tests] (G:/chrome/oesapp-dev-466879f903a77a6ca7f8bb3b6811acf920531854/oesapp-dev-466879f903a77a6ca7f8bb3b6811acf920531854/test/e2e/specs/test.js:14:15)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
