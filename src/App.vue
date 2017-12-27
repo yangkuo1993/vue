@@ -1,28 +1,12 @@
 <template>
   <div id="app">
-    <router-view></router-view>
-    <tabbar v-show="showTabbar" v-model="selectBarIndex">
-      <tabbar-item link="/home">
-        <img slot="icon" src="./assets/images/homepage.png">
-        <img slot="icon-active" src="./assets/images/homepage_fill.png">
-        <span slot="label">首页</span>
-      </tabbar-item>
-      <tabbar-item link="/course">
-        <img slot="icon" src="./assets/images/order.png">
-        <img slot="icon-active" src="./assets/images/order_fill.png">
-        <span slot="label">课程</span>
-      </tabbar-item>
-      <tabbar-item link="/my">
-        <img slot="icon" src="./assets/images/people.png">
-        <img slot="icon-active" src="./assets/images/people_fill.png">
-        <span slot="label">我的</span>
-      </tabbar-item>
-    </tabbar>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
 <script>
-import { Tabbar, TabbarItem } from 'vux'
 export default {
   name: 'app',
   data () {
@@ -37,14 +21,12 @@ export default {
   mounted () {
   },
   components: {
-    Tabbar,
-    TabbarItem
   },
   methods: {
   },
   watch: {
     '$route' (to) {
-      to.name === 'login' ? this.showTabbar = false : this.showTabbar = true
+      (to.name === 'login' || to.name === 'homeLoad') ? this.showTabbar = false : this.showTabbar = true
       if (to.path === '/course') {
         this.selectBarIndex = 1
       } else if (to.path === '/home') {
@@ -62,6 +44,25 @@ export default {
 <style lang="scss">
   @import 'assets/style/mixin';
   @import 'assets/style/common';
+  @import 'assets/iconfont/iconfont.css';
+  @font-face {
+    font-family: 'iconfont';
+    src: url('./assets/iconfont/iconfont.eot');
+    src: url('./assets/iconfont/iconfont.eot') format('embedded-opentype'),
+    url('./assets/iconfont/iconfont.woff') format('woff'),
+    url('./assets/iconfont/iconfont.ttf') format('truetype'),
+    url('./assets/iconfont/iconfont.svg') format('svg');
+  }
+  .iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  html{
+    background: #ffffff;
+  }
   #app{
     width: 100%;
     height: 100%;
@@ -77,5 +78,33 @@ export default {
   }
   .active{
     color: red;
+  }
+  .bullet-top{
+    background: #0b77ce;
+    width: .21333333rem;
+    height: .21333333rem;
+    border-radius: .10666667rem;
+    transition: all .3s;
+    opacity: 1;
+    display: inline-block;
+    margin: 0 5px;
+  }
+  .bullet-top-active{
+    width: .85333333rem;
+    background: #0970c3;
+  }
+  .class-bullet-top{
+    background: #e8eff5;
+    width: .21333333rem;
+    height: .21333333rem;
+    border-radius: .10666667rem;
+    transition: all .3s;
+    opacity: 1;
+    display: inline-block;
+    margin: 0 5px;
+  }
+  .class-bullet-top-active{
+    width: .85333333rem;
+    background: #e8eff5;
   }
 </style>

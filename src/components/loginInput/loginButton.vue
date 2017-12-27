@@ -1,5 +1,8 @@
 <template>
-  <button class="button">测试按钮{{text}}</button>
+  <button class="button">
+    {{text}}
+    <slot></slot>
+  </button>
 </template>
 
 <script>
@@ -45,12 +48,12 @@
     margin: 10px 0;
   }
   .button{
-    width: 80%;
-    margin-left: 10%;
-    height: 40px;
+    width: 318px;
+    height: 45px;
+    line-height: 45px;
     background: #fff;
-    padding-left: 10px;
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
+    border-radius: 5px;
   }
 </style>

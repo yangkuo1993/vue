@@ -7,13 +7,13 @@ import router from './router'
 import './filter'
 import mock from './api/login/mock'
 import FastClick from 'fastclick'
+import 'amfe-flexible'
 import VueVideoPlayer from 'vue-video-player'
-import { LoadingPlugin, AlertPlugin } from 'vux'
 FastClick.attach(document.body)
-Vue.use(LoadingPlugin)
-Vue.use(AlertPlugin)
 Vue.use(mock)
 Vue.use(VueVideoPlayer)
+import { LoadingPlugin } from 'vux'
+Vue.use(LoadingPlugin)
 
 Vue.config.productionTip = false
 
